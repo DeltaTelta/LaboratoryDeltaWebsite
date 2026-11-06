@@ -1,0 +1,576 @@
+/* ============================= */
+/* ОБЩИЕ НАСТРОЙКИ */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 3600px;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: #000000;
+    z-index: -1;
+}
+
+img {
+    display: block;
+    height: auto;
+    image-rendering: pixelated;
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+
+/* ============================= */
+/* ШРИФТЫ */
+/* ============================= */
+
+@font-face {
+    font-family: "Default";
+    src: url("fonts/PixelTimes.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Bold";
+    src: url("fonts/PixelTimesBold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ============================= */
+/* НИЖНЯЯ ПЛАШКА */
+/* ============================= */
+
+.downbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    z-index: 1000;
+    transform: scaleY(-1);
+}
+
+
+/* ============================= */
+/* ГЛАВНАЯ СЕКЦИЯ */
+/* ============================= */
+
+.mainpage {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* Фоновое изображение */
+
+.mainpage_bg {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: -1;
+}
+
+
+/* Логотип */
+
+.logopart {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+    max-width: 1728px;
+
+    aspect-ratio: 16 / 9;
+}
+
+.logolabbeta {
+    position: absolute;
+
+    width: 70%;
+
+    top: 15%;
+    left: 22%;
+}
+
+.mainpage_title {
+    position: absolute;
+
+    width: 70%;
+
+    top: 28%;
+    left: 5%;
+}
+
+
+/* Нижняя секция */
+
+.bottom_section {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+}
+
+.transition_plate {
+    position: absolute;
+
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    z-index: 2;
+
+    transform: translateY(-50%);
+}
+
+.textbg {
+    position: absolute;
+
+    top: 150%;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    z-index: 0;
+}
+
+.maininfotitle {
+    position: absolute;
+
+    top: 3vw;
+    left: 3vw;
+
+    color: white;
+
+    font-family: "Default", sans-serif;
+    font-size: clamp(14px, 2.2vw, 48px);
+
+    text-shadow: 3px 3px 10px black;
+
+    z-index: 2;
+}
+
+
+/* ============================= */
+/* СЕКЦИЯ HOWPLAY */
+/* ============================= */
+
+.howplay {
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.howplay_content {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+}
+
+
+.backbg {
+    position: absolute;
+
+    top: 37%;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    z-index: 0;
+}
+
+
+
+  .serverandlinks_bg_plate {
+    position: absolute;
+
+    top: 99%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 70%;
+    height: auto;
+
+    z-index: 1;
+}
+
+
+
+.howplay_bg_plate {
+    position: absolute;
+
+    top: 30%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 70%;
+    height: auto;
+
+    z-index: 1;
+}
+
+
+
+.label_plate {
+    position: absolute;
+
+    top: 18%;
+    left: 50%;
+
+    transform: translateX(-50%) rotate(-1deg);
+
+    width: 120%;
+    height: auto;
+
+    z-index: 2;
+}
+
+
+
+.howplaylabel {
+    position: absolute;
+
+    top: 24%;
+    left: 5%;
+
+    color: white;
+
+    font-family: "Bold", sans-serif;
+
+    font-size: clamp(20px, 5vw, 80px);
+
+    text-shadow: 3px 3px 10px black;
+
+    z-index: 3;
+}
+
+.installminecraft {
+    position: absolute;
+
+    top: 41%;
+    left: 17%;
+
+    color: rgb(211, 211, 211);
+
+    font-family: "Default", sans-serif;
+
+    font-size: clamp(20px, 2.4vw, 80px);
+
+    text-shadow: 3px 3px 10px black;
+
+    line-height: 2;
+
+    z-index: 3;
+}
+
+.skinlabel {
+    position: absolute;
+
+    top: 77%;
+    left: 43%;
+
+    color: rgb(192, 192, 192);
+
+    font-family: "Default", sans-serif;
+
+    font-size: clamp(20px, 2vw, 80px);
+
+    text-shadow: 3px 3px 10px black;
+    transform: rotate(2deg);
+    z-index: 3;
+}
+
+.titleplate {
+    position: absolute;
+
+    top: 62%;
+    left: 41%;
+    width: 44%;
+    transform: rotate(2deg);
+    z-index: 2;
+}
+
+.installminecraft a {
+    color: #58d7fd;           /* Цвет ссылки */
+}
+
+.installminecraft a:hover {
+    color: #ffffff;           /* Цвет при наведении */
+}
+
+.serverlinks_label_plate {
+    position: absolute;
+
+    top: 95%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 70%;
+    height: auto;
+
+    z-index: 1;
+}
+
+.serverlinks_label {
+    position: absolute;
+
+    top: 102%;
+    left: 27%;
+
+    color: rgb(255, 255, 255);
+
+    font-family: "Bold", sans-serif;
+
+    font-size: clamp(20px, 2.7vw, 80px);
+
+    text-shadow: 3px 10px 2px rgb(26, 26, 26);
+    z-index: 3;
+}
+
+.serverlinks_title {
+    position: absolute;
+
+    top: 114%;
+    left: 17%;
+
+    color: rgb(235, 235, 235);
+
+    font-family: "Default", sans-serif;
+
+    font-size: clamp(20px, 2.2vw, 80px);
+
+    text-shadow: 3px 10px 2px rgb(26, 26, 26);
+    z-index: 3;
+}
+
+.serverlinks_title a{
+    color: rgb(83, 83, 83);
+    text-shadow: none;
+}
+
+.links_whoosh {
+    position: absolute;
+
+    top: 135%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+    height: auto;
+
+    z-index: 1;
+}
+
+.links_label {
+    position: absolute;
+
+    top: 152%;
+    left: 55%;
+
+    color: rgb(255, 255, 255);
+
+    font-family: "Default", sans-serif;
+
+    font-size: clamp(20px, 3.4vw, 80px);
+    transform: rotate(1deg);
+
+    text-shadow: 1px 10px 1px rgb(37, 37, 37);
+    z-index: 3;
+}
+
+.downplate {
+    position: absolute;
+
+    top: 220%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 105%;
+    height: auto;
+
+    z-index: 1;
+}
+
+.buttons_row {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+
+    width: 100%;
+    top: 173%;
+    z-index: 3;
+    right: 5%;
+}
+
+.texture_button {
+    image-rendering: pixelated;
+    width: 13%;
+    aspect-ratio: 1 / 1;
+
+    padding: 0;
+    border: none;
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+.button1 {
+    background-image: url("images/youtube_button.png");
+}
+
+.button2 {
+    background-image: url("images/discord_button.png");
+}
+
+.button3 {
+    background-image: url("images/boosty_button.png");
+}
+
+.texture_button:hover {
+    filter: brightness(1.4) drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+    transform: scale(1.04);
+}
+
+/* Эффект при нажатии */
+.texture_button:active {
+    filter: brightness(1.7);
+    transform: scale(0.97);
+}
+
+.next_label {
+    position: absolute;
+
+    top: 205%;
+    left: 19%;
+
+    color: rgb(116, 116, 116);
+
+    font-family: "Bold", sans-serif;
+
+    font-size: clamp(20px, 2vw, 80px);
+    z-index: 3;
+}
+
+/* ============================= */
+/* АДАПТАЦИЯ */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    .logopart {
+        width: 100%;
+    }
+
+    .serverandlinks_bg_plate,
+    .howplay_bg_plate {
+        width: 95%;
+    }
+
+    .label_plate {
+        width: 110%;
+    }
+
+    .howplaylabel {
+        font-size: clamp(16px, 5vw, 38px);
+    }
+
+}
+
+/* ============================= */
+/* КНОПКИ НА DOWNBAR */
+/* ============================= */
+
+.downbar_buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 65%;
+    height: 5%;
+
+    left:50%;
+    transform: translate(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5%;
+
+    z-index: 1001;
+}
+
+.downbar_button {
+    color: white;
+
+    font-family: "Bold", sans-serif;
+    font-size: clamp(12px, 1.5vw, 28px);
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    text-shadow: 2px 2px 5px black;
+
+    transition: 0.15s;
+}
+
+.downbar_button:hover {
+    color: #4d4d4d;
+    transform: scale(1.1);
+}
